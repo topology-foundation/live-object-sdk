@@ -10,3 +10,11 @@ license = "MIT"
 crate-type = ["cdylib"]
 
 [dependencies]
+
+[profile.release]
+strip = "debuginfo"
+lto = true
+opt-level = "z"
+codegen-units=1
+panic = "abort"
+overflow-checks = true
